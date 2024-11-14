@@ -1,7 +1,8 @@
 import './App.css';
+import LandingPage from '../components/landingPage';
 
 function App() {
-  const cookie = false;
+  const cookie = true;
 
   if(!cookie) {
     return (
@@ -14,9 +15,9 @@ function App() {
   } else {
     return (
       <>
-        <div>
-          Hello world!
-        </div>  
+        <div id="container">
+          <LandingPage /> 
+        </div>
       </>
     )
   }

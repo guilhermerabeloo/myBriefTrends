@@ -4,6 +4,10 @@
   font-family: Arial, Helvetica, sans-serif
 }
 
+#container {
+  height: 98vh;
+}
+
 @media screen and (max-width: 480px) {
   .content {
       display: flex;

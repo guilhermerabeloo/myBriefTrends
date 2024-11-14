@@ -1,0 +1,38 @@
+#header {
+    display: flex;
+    flex-direction: column;
+    height: 12%;
+}
+
+.header-superior {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    height: 40%;
+}
+
+#btn-administracao {
+    color: brown;
+    background: none;
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#btn-administracao:hover {
+    opacity: .7;
+}
+
+.header-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    color: white;
+    height: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+}

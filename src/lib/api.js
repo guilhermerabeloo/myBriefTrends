@@ -1,5 +1,10 @@
 import axios from 'axios';
 
-export const api = axios.create({
-    baseURL: 'http://localhost:3001'
+const apikey = import.meta.env.VITE_NEWS_API_KEY
+
+export const newsapi = axios.create({
+    baseURL: 'https://newsapi.org/v2',
+    params: {
+        apiKey: apikey
+    }
 })

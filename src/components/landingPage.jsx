@@ -11,10 +11,13 @@ export default function LandingPage() {
 
     useEffect(() => {
         async function getTopNoticias() {
+            const dataInicio = new Date()
+            dataInicio.setDate(dataInicio.getDate() - 3)
+
             const response = await newsapi.get('/everything', {
                 params: {
                     q: 'brasil',
-                    from: '2024-11-10',
+                    from: dataInicio,
                     sortBy: 'relevancy',
                     language: 'pt',
                     pageSize: 4

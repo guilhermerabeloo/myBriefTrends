@@ -56,8 +56,12 @@ export default function LandingPage() {
                     <h1 className='titulo-landingpage'>My Brief Trends</h1>
                     <p className='slogan-landingpage'>Sua dose diária de tendências para economizar seu tempo</p>
                     <div className="area-entrar">
-                        <button id="btn-singin">Cadastrar-se</button>
-                        <button id="btn-login">Entrar</button>
+                        <Link to='/singin'>
+                            <button id="btn-singin">Cadastrar-se</button>
+                        </Link>
+                        <Link to='/login'>
+                            <button id="btn-login">Entrar</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="ultimastendencias-landingpage">

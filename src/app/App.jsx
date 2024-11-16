@@ -1,5 +1,5 @@
 import './App.css';
-import LandingPage from '../components/landingPage';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const cookie = true;
@@ -16,7 +16,7 @@ function App() {
     return (
       <>
         <div id="container">
-          <LandingPage /> 
+          <Outlet /> 
         </div>
       </>
     )

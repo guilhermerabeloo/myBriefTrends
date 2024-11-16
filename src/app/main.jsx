@@ -1,14 +1,36 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from '../lib/AuthContext.jsx'
+
 import App from './App.jsx'
+import Singin from '../components/Singin.jsx'
+import Login from '../components/Login.jsx'
+import LandingPage from '../components/landingPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: []
+    children: [
+      {
+        path: '/',
+        element: <Navigate to="/home" />
+      },
+      {
+        path: '/home',
+        element: <LandingPage />
+      },
+    ]
+  },
+  {
+    path: '/singin',
+    element: <Singin />
+  },
+  {
+    path: '/login',
+    element: <Login />
   }
 ])
 

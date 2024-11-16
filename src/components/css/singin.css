@@ -1,0 +1,164 @@
+#container-singin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    width: 100%;
+}
+
+.apresentacao-singin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.apresentacao-singin .titulo-singin {
+    font-size: 40px;
+}
+
+.apresentacao-singin .slogan-singin {
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 20%;
+    width: 80%;
+    text-align: center;
+}
+
+.area-singin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#form-singin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 3px brown;
+    border-radius: 5px;
+    height: 60%;
+    width: 55%;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+#form-singin h4.titulo-formsingin {
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+}
+
+#form-singin .input {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+#form-singin label {
+    font-size: 13px;
+}
+
+#form-singin .input input{
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 10px; 
+    border: solid .1px gray;
+    padding: 0 9px 0 9px;
+}
+
+#form-singin .interesses {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+#form-singin button#btn-confirmarsingin {
+    background-color: brown;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border: 2.5px solid brown;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#form-singin button#btn-confirmarsingin:hover {
+    opacity: .8;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #container-singin {
+        display: flex;
+        flex-direction: column;
+        height: 88vh;
+        width: 100%;
+    }
+
+    .apresentacao-singin .titulo-singin {
+        font-size: 30px;
+    }
+    
+    .apresentacao-singin .slogan-singin {
+        font-size: 17px;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 20%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .apresentacao-singin {
+        width: 100%;
+        height: 30%;
+    }
+
+    .area-singin {
+        width: 100%;
+    }
+
+    #form-singin {
+        border: solid 2px brown;
+        border-radius: 5px;
+        height: 80%;
+        width: 50%;
+    }
+    #form-singin h4.titulo-formsingin {
+        font-size: 18px;
+    }
+
+    #form-singin .input {
+        width: 45vw;
+    }
+    
+    #form-singin .interesses {
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #form-singin {
+        border: solid 2px brown;
+        border-radius: 5px;
+        height: 80%;
+        width: 60%;
+    }
+
+    #form-singin .input {
+        width: 55vw;
+    }
+    
+    #form-singin .interesses {
+        width: 55vw;
+    }
+}

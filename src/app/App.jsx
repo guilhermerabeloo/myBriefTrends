@@ -1,16 +1,16 @@
+import LandingPage from '../components/landingPage';
 import './App.css';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 function App() {
-  const cookie = true;
+  const cookie = false;
+  const navigate = useNavigate();
 
   if(!cookie) {
+    navigate('/landingpage');
+    console.log('oi')
     return (
-      <>
-        <div>
-          Hello world!
-        </div>  
-      </>
+      <LandingPage />
     )
   } else {
     return (

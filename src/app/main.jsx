@@ -8,6 +8,7 @@ import App from './App.jsx'
 import Singin from '../components/Singin.jsx'
 import Login from '../components/Login.jsx'
 import LandingPage from '../components/landingPage.jsx'
+import Home from '../components/Home.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,13 +17,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Navigate to="/home" />
+        element: <Navigate to="/landingpage" />
       },
       {
         path: '/home',
-        element: <LandingPage />
+        element: <Home />
       },
     ]
+  },
+  {
+    path: '/landingpage',
+    element: <LandingPage />
   },
   {
     path: '/singin',

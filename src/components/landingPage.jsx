@@ -1,6 +1,6 @@
 import './css/LandingPage.css'
 import Header from './Header'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsArrowRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { newsapi } from '../lib/api'
@@ -8,6 +8,15 @@ import { newsapi } from '../lib/api'
 
 export default function LandingPage() {
     const [ topNoticias, setTopNoticias ] = useState([])
+
+    const navigate = useNavigate();
+    const cookie = true;
+  
+    useEffect(() => {
+      if (cookie) {
+        navigate('/home');
+      }
+    }, [cookie, navigate]);
 
     useEffect(() => {
         async function getTopNoticias() {

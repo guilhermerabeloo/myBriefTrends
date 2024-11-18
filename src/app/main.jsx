@@ -16,11 +16,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
-        element: <Navigate to="/landingpage" />
+        path: '',
+        element: <Navigate to="/home" replace />
       },
       {
-        path: '/home',
+        path: 'home',
         element: <Home />
       },
     ]

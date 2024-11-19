@@ -1,7 +1,18 @@
-import Header from "./Header";
 import "./css/login.css"
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./Header";
 
 export default function Login() {
+    const navigate = useNavigate();
+    const cookie = true;
+  
+    useEffect(() => {
+      if (cookie) {
+        navigate('/home');
+      }
+    }, [cookie, navigate]);
+
     return (
         <>
             <Header />

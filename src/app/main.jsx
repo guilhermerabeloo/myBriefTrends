@@ -9,6 +9,7 @@ import Singin from '../components/Singin.jsx'
 import Login from '../components/Login.jsx'
 import LandingPage from '../components/landingPage.jsx'
 import Home from '../components/Home.jsx'
+import Administracao from '../components/Administracao.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: 'home',
         element: <Home />
+      },
+      {
+        path: 'administracao',
+        element: <Administracao />
       },
     ]
   },

@@ -1,7 +1,19 @@
-import Header from "./Header";
 import "./css/singin.css"
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./Header";
 
 export default function Singin() {
+    const navigate = useNavigate();
+    const cookie = true;
+  
+    useEffect(() => {
+      if (cookie) {
+        navigate('/home');
+      }
+    }, [cookie, navigate]);
+
+
     return (
         <>
             <Header />
@@ -14,6 +26,10 @@ export default function Singin() {
                     <form action="submit" id="form-singin">
                         <h4 className="titulo-formsingin">Crie sua conta</h4>
                         <div className="form-grupoinputs">
+                            <div className="input">
+                                <label htmlFor="nomecompleto">Nome completo</label>
+                                <input type="text" id="nomecompleto" name="nomecompleto"/>
+                            </div>
                             <div className="input">
                                 <label htmlFor="email">Email</label>
                                 <input type="text" id="email" name="email"/>
